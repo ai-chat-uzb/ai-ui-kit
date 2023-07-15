@@ -1,2 +1,2 @@
-export { default as Hello } from './hello/hello';
-export { default as Hi } from './hi/hi';
+export { default as Button } from './button/button';
+export { default as Icons } from './icon/icon';

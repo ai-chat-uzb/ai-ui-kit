@@ -7,9 +7,9 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/preset-create-react-app'
   ],
-  framework: '@storybook/react',
-  core: {
-    builder: '@storybook/builder-webpack5'
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {}
   },
   webpackFinal: config => {
     config.resolve = {
@@ -19,12 +19,14 @@ module.exports = {
         components: path.resolve(__dirname, '../src', 'components')
       }
     };
-
     return {
       ...config,
       plugins: config.plugins.filter(plugin => {
         return plugin.constructor.name !== 'ESLintWebpackPlugin';
       })
     };
+  },
+  docs: {
+    autodocs: true
   }
 };

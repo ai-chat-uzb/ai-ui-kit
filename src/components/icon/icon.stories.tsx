@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentMeta } from '@storybook/react';
 
-import { Title, Source } from '@storybook/addon-docs/blocks';
+import { Title, Source } from '@storybook/addon-docs';
 import dedent from 'ts-dedent';
 
 import Icon from './icon';

@@ -2,22 +2,22 @@
 
 import React from 'react';
 
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 
-import {{properCase name}} from './{{kebabCase name}}';
+import {{properCase name}}, { {{properCase name}}Props } from './{{kebabCase name}}';
 
 export default {
   title: 'Components/{{properCase name}}',
   component: {{properCase name}},
   argTypes: {}
-} as ComponentMeta<typeof {{properCase name}}>;
+} as Meta<typeof {{properCase name}}>;
 
-export const Story: ComponentStory<typeof {{properCase name}}> = props => <{{properCase name}} {...props} />
+export const Story: StoryObj<typeof {{properCase name}}> = (props: JSX.IntrinsicAttributes & {{properCase name}}Props)  => <{{properCase name}} {...props} />
 
 Story.args = {
   children: <h1>Hello {{properCase name}}</h1>
 }
 
-Story.story = {
+{{!-- Story.story = {
   name: "{{properCase name}}"
-};
+}; --}}

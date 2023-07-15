@@ -1,0 +1,248 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  height: max-content;
+  overflow: hidden;
+  font-weight: 600;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-style: normal;
+  letter-spacing: 0.15px;
+  box-shadow: 0 3px 10px transparent;
+  cursor: pointer;
+  transition: all ease-in 0.225s;
+
+  &:hover {
+    box-shadow: 0 0 16px var(--color-green-4);
+  }
+
+  /* //?  dimensions */
+  &.small {
+    padding: 8px 12px;
+    color: var(--day-blue-900, #0c1132);
+    font-size: 12px;
+    line-height: 16px; /* 150% */
+    border-radius: 8px;
+  }
+
+  &.medium {
+    gap: 10px;
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 20px; /* 142.857% */
+    border-radius: 10px;
+  }
+
+  &.large {
+    gap: 12px;
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 12px;
+  }
+
+  /* //? hover is a different element */
+  &.green {
+    .ripples {
+      background: var(--color-green-6) !important;
+    }
+  }
+
+  &.tertiary {
+    color: var(--color-black-2);
+    background: var(--color-black-6);
+    border: 1.2px solid var(--color-black-9);
+
+    &:hover {
+      border: 1.2px solid var(--color-black-4);
+      box-shadow: none;
+    }
+  }
+
+  &.outline {
+    color: var(--color-black-4);
+    background: transparent;
+
+    &:hover {
+      box-shadow: none !important;
+    }
+  }
+
+  &.glass {
+    color: var(--color-black-2);
+    background: var(
+      --glass-fill,
+      linear-gradient(
+        145deg,
+        rgba(215, 237, 237, 0.16) 0%,
+        rgba(204, 235, 235, 0) 100%
+      )
+    );
+    border: 1.2px solid var(--color-black-9);
+    box-shadow: 0 8px 12px 0 rgba(255, 255, 255, 0.08) inset,
+      0 24px 24px -16px rgba(0, 0, 0, 0.12),
+      16px 24px 64px -24px rgba(255, 255, 255, 0.08) inset;
+
+    &:hover {
+      border: 1.2px solid var(--color-black-4);
+    }
+  }
+
+  /* //? 3 different views */
+  &.full {
+    &.green {
+      color: var(--color-black-9);
+      background: var(--color-green-4);
+    }
+
+    &.line {
+      color: var(--color-green-5);
+      background: transparent;
+      border: 3px solid var(--color-green-4);
+    }
+
+    &.tertiary {
+      color: var(--color-black-3);
+      background: var(--color-black-6);
+    }
+
+    &.outline {
+      color: var(--color-black-3);
+      background: transparent;
+    }
+
+    &.glass {
+      color: var(--color-black-2);
+      background: var(
+        --glass-fill,
+        linear-gradient(
+          145deg,
+          rgba(215, 237, 237, 0.16) 0%,
+          rgba(204, 235, 235, 0) 100%
+        )
+      );
+
+      /* Glass/Effects */
+      box-shadow: 0 8px 12px 0 rgba(255, 255, 255, 0.08) inset,
+        0 24px 24px -16px rgba(0, 0, 0, 0.12),
+        16px 24px 64px -24px rgba(255, 255, 255, 0.08) inset;
+    }
+  }
+
+  &.lighter {
+    &.green {
+      color: var(--color-black-9);
+      background: var(--color-green-4);
+    }
+
+    &.line {
+      color: var(--color-green-5);
+      border: 3px solid var(--color-green-4);
+    }
+
+    &.tertiary {
+      color: var(--color-black-3);
+      background: var(--color-black-5);
+    }
+
+    &.outline {
+      color: var(--color-black-3);
+      background: transparent;
+    }
+
+    &.glass {
+      color: var(--color-black-2);
+      background: var(
+        --glass-fill,
+        linear-gradient(
+          145deg,
+          rgba(215, 237, 237, 0.16) 0%,
+          rgba(204, 235, 235, 0) 100%
+        )
+      );
+
+      /* Glass/Effects */
+      box-shadow: 0 8px 12px 0 rgba(255, 255, 255, 0.08) inset,
+        0 24px 24px -16px rgba(0, 0, 0, 0.12),
+        16px 24px 64px -24px rgba(255, 255, 255, 0.08) inset;
+    }
+  }
+
+  &.very-light {
+    &.green {
+      color: var(--color-black-9);
+      background: var(--color-green-3);
+    }
+
+    &.line {
+      color: var(--color-green-5);
+      border: 3px solid var(--color-green-3);
+    }
+
+    &.tertiary {
+      color: var(--color-black-2);
+      background: var(--color-black-4);
+
+      &:hover {
+        border-color: var(--color-black-3);
+      }
+    }
+
+    &.outline {
+      color: var(--color-black-2);
+      background: transparent;
+    }
+
+    &.glass {
+      color: var(--color-white);
+      background: var(
+        --glass-fill,
+        linear-gradient(
+          145deg,
+          rgba(215, 237, 237, 0.16) 0%,
+          rgba(204, 235, 235, 0) 100%
+        )
+      );
+
+      /* Glass/Effects */
+      box-shadow: 0 8px 12px 0 rgba(255, 255, 255, 0.08) inset,
+        0 24px 24px -16px rgba(0, 0, 0, 0.12),
+        16px 24px 64px -24px rgba(255, 255, 255, 0.08) inset;
+    }
+  }
+
+  .ripples {
+    position: absolute;
+    background: var(--color-heisenberg-3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 1s linear infinite;
+    pointer-events: none;
+  }
+
+  .text {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-weight: inherit;
+    font-size: inherit;
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
