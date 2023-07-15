@@ -6,6 +6,12 @@ import packageJson from './package.json' assert { type: 'json' };
 import postcss from 'rollup-plugin-postcss';
 import terser from '@rollup/plugin-terser';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import copy from 'rollup-plugin-copy';
+import svgr from '@svgr/rollup';
+import svg from 'rollup-plugin-svg-import';
+import autoprefixer from 'autoprefixer';
+import nano from 'cssnano';
+import path from 'path';
 
 export default [
   {
@@ -31,9 +37,27 @@ export default [
       }),
       // 👇 new
       postcss({
-        plugins: []
+        plugins: [
+          autoprefixer(),
+          nano({ preset: ['default', { calc: false }] })
+        ],
+        autoModules: true,
+        modules: {
+          generateScopedName: (name, filename) => {
+            const scope = path
+              .basename(filename, '.css')
+              .replace('.module.scss', '');
+
+            return `${scope}_${name}`;
+          }
+        },
+        inject: false,
+        extract: true
       }),
-      terser()
+      terser(),
+      svg(),
+      svgr(),
+      copy({ targets: [{ src: 'src/assets/styles/fonts', dest: 'dist' }] })
     ]
   },
   {
