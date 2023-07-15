@@ -1,0 +1,53 @@
+@font-face {
+  font-weight: 400;
+  font-family: 'Work Sans';
+  font-style: normal;
+  src: url('./fonts/work-sans/WOFF2/WorkSans-Regular.woff2') format('woff2'),
+    url('./fonts/work-sans/WOFF/WorkSans-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: 'Work Sans';
+  font-style: normal;
+  src: url('./fonts/work-sans/WOFF2/WorkSans-Medium.woff2') format('woff2'),
+    url('./fonts/work-sans/WOFF/WorkSans-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: 'Neue Machina';
+  font-style: normal;
+  src: url('./fonts/neue-machina/NeueMachina-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-weight: bold;
+  font-family: 'Neue Machina';
+  font-style: italic;
+  src: url('./fonts/neue-machina/NeueMachina-Ultrabold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: 'Neue Machina';
+  font-style: normal;
+  src: url('./fonts/neue-machina/NeueMachina-Light.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-weight: 400;
+  font-family: 'Neue Machina';
+  font-style: normal;
+  src: url('./fonts/neue-machina/NeueMachina-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-weight: 500;
+  font-family: 'Neue Machina';
+  font-style: normal;
+  src: url('./fonts/neue-machina/NeueMachina-Medium.woff2') format('woff2');
+  font-display: swap;
+}

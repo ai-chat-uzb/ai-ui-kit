@@ -5,6 +5,7 @@
     "lib",
     "scripts",
     "src/**/*.stories.tsx",
-    "storybook-static"
+    "storybook-static",
+    "rollup.config.mjs"
   ]
 }
