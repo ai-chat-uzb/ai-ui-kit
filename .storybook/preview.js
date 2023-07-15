@@ -1,4 +1,4 @@
-import 'antd/dist/antd.min.css';
+// import 'antd/dist/antd.min.css';
 import 'react-loading-skeleton/dist/skeleton.css';
 // import '../src/assets/styles/main.scss';
 import './style.scss';

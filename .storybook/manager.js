@@ -3,7 +3,7 @@ import { create } from '@storybook/theming';
 
 const theme = create({
   base: 'light',
-  brandTitle: 'Comfi UI KIT',
+  brandTitle: 'AI UI-KIT',
   brandUrl: ''
 });
 
