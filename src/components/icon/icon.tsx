@@ -6,8 +6,10 @@ import * as List from './list';
 
 import classes from './icon.module.scss';
 
+export type ListProps = keyof typeof List;
+
 export interface IIconProps {
-  name: keyof typeof List;
+  name: ListProps;
   size?: number;
   className?: string;
   color?: string;

@@ -28,6 +28,12 @@ export default {
     colorView: {
       options: ['full', 'lighter', 'very-light'],
       control: { type: 'select' }
+    },
+    iconName: {
+      options: 'string'
+    },
+    iconSize: {
+      control: 'number'
     }
   }
 } as Meta<typeof Button>;
@@ -37,11 +43,14 @@ export const StoryComponent: StoryObj<typeof Button> = (
 ) => <Button {...props} />;
 
 StoryComponent.args = {
-  children: 'Hi',
+  iconName: 'alertCircle',
+  children: 'Hello',
   size: 'small',
   loading: false,
   disabled: false,
-  view: 'green'
+  view: 'green',
+  colorView: 'full',
+  iconSize: 14
 };
 
 // StoryComponent.story = {

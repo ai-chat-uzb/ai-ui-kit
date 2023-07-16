@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import { ButtonProps as BaseButtonProps } from 'antd/lib/button/button';
 import cx from 'classnames';
 
+import Icon, { ListProps } from 'components/icon/icon';
+
 import cls from './button.module.scss';
 
 export interface ButtonProps
@@ -10,10 +12,11 @@ export interface ButtonProps
     'className' | 'loading' | 'disabled' | 'htmlType' | 'onClick'
   > {
   size: 'small' | 'medium' | 'large';
-  colorView?: 'full' | 'lighter' | 'very-light';
+  colorView: 'full' | 'lighter' | 'very-light';
   view: 'green' | 'line' | 'tertiary' | 'outline' | 'glass';
-  children: React.ReactNode;
-  icon?: string;
+  children?: string;
+  iconName?: ListProps;
+  iconSize?: number;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -26,7 +29,8 @@ const Button: React.FC<ButtonProps> = ({
   size,
   view,
   colorView,
-  icon
+  iconName,
+  iconSize
 }) => {
   const ref = useRef<HTMLButtonElement>(null);
 
@@ -71,7 +75,10 @@ const Button: React.FC<ButtonProps> = ({
         </div>
       ) : (
         <>
-          {icon && icon} <p className={cls.text}>{children}</p>
+          {iconName && (
+            <Icon size={iconSize} name={iconName || 'alertCircle'} />
+          )}
+          {children && <p className={cls.text}>{children}</p>}
         </>
       )}
     </button>
