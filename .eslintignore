@@ -1,7 +1,6 @@
 node_modules/*
 tools/*
 .storybook/*
-commitlint.config.js
 
 jest.config.js
 src/**/*.stories.tsx
