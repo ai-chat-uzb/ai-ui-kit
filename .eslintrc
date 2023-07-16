@@ -41,7 +41,13 @@
           // react
           // Packages.
           // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
-          ["^react$", "^react-dom$", "^react-router$", "^react-router-dom$", "^@?\\w"],
+          [
+            "^react$",
+            "^react-dom$",
+            "^react-router$",
+            "^react-router-dom$",
+            "^@?\\w"
+          ],
           ["^containers(/.*|$)"],
           ["^hooks(/.*|$)"],
           ["^components(/.*|$)"],
@@ -112,5 +118,6 @@
         "functions": "never"
       }
     ]
-  }
+  },
+  "include": ["scripts/buildUtils.ts", "rollup.config.ts"]
 }

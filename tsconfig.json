@@ -1,21 +1,35 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["es6", "dom"],
+    "sourceMap": false,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "baseUrl": "src/",
+    "paths": {},
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "rootDir": "src"
+    "noEmit": true
   },
-  "include": ["src/**/*"]
+  "exclude": [
+    "node_modules",
+    "lib",
+    "scripts",
+    "src/**/*.stories.tsx",
+    "storybook-static"
+  ],
+  "types": ["typePatches"],
+  "include": ["src/**/*", "rollup.config.ts"]
 }
