@@ -17,5 +17,5 @@
     "jsx": "react-jsx",
     "rootDir": "src"
   },
-  "include": ["src/**/*", "rollup.config.mjs"]
+  "include": ["src/**/*"]
 }

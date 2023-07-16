@@ -1,17 +1,18 @@
-import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import typescript from '@rollup/plugin-typescript';
-import dts from 'rollup-plugin-dts';
-import packageJson from './package.json' assert { type: 'json' };
-import postcss from 'rollup-plugin-postcss';
+import resolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import copy from 'rollup-plugin-copy';
+import typescript from '@rollup/plugin-typescript';
 import svgr from '@svgr/rollup';
-import svg from 'rollup-plugin-svg-import';
 import autoprefixer from 'autoprefixer';
 import nano from 'cssnano';
 import path from 'path';
+import copy from 'rollup-plugin-copy';
+import dts from 'rollup-plugin-dts';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import postcss from 'rollup-plugin-postcss';
+import svg from 'rollup-plugin-svg-import';
+
+const packageJson = require('./package.json');
 
 export default [
   {
@@ -19,11 +20,13 @@ export default [
     output: [
       {
         file: packageJson.main,
-        format: 'cjs'
+        format: 'cjs',
+        sourcemap: true
       },
       {
         file: packageJson.module,
-        format: 'esm'
+        format: 'esm',
+        sourcemap: true
       }
     ],
     plugins: [
@@ -61,7 +64,7 @@ export default [
     ]
   },
   {
-    input: 'dist/esm/index.d.ts',
+    input: 'dist/esm/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
     external: [/\.(css|less|scss)$/] //👈 new
