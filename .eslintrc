@@ -118,6 +118,5 @@
         "functions": "never"
       }
     ]
-  },
-  "include": ["scripts/buildUtils.ts", "rollup.config.ts"]
+  }
 }
