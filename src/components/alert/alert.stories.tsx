@@ -29,6 +29,9 @@ export default {
     },
     subTitle: {
       options: 'string'
+    },
+    className: {
+      options: 'string'
     }
   }
 } as Meta<typeof Alert>;
@@ -43,5 +46,6 @@ StoryComponent.args = {
   type: 'success',
   title: 'Title',
   alertSubTitle: 'Success!',
-  subTitle: 'Just Do It'
+  subTitle: 'Just Do It',
+  className: 'custom-alert'
 };

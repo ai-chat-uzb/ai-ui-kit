@@ -24,9 +24,16 @@ const Alert: React.FC<AlertProps> = ({
   alertSubTitle,
   subTitle,
   iconName,
-  iconSize
+  iconSize,
+  className
 }) => (
-  <div className={cx(cls.wrapper, !title && cls['small-wrap'])}>
+  <div
+    className={cx(
+      cls.wrapper,
+      !title && cls['small-wrap'],
+      className && className
+    )}
+  >
     <div className={cls[`${type}`]}>
       <Icon size={iconSize || 24} name={iconName || 'bulb'} />
     </div>
