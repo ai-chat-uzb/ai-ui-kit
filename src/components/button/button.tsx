@@ -18,6 +18,10 @@ export interface ButtonProps
   iconName?: ListProps;
   iconSize?: number;
   iconPosition?: 'right' | 'left';
+  width?: string | number;
+  height?: string | number;
+  padding?: string | number;
+  margin?: string | number;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -32,7 +36,11 @@ const Button: React.FC<ButtonProps> = ({
   colorView,
   iconName,
   iconSize,
-  iconPosition = 'left'
+  iconPosition = 'left',
+  width,
+  height,
+  padding,
+  margin
 }) => {
   const ref = useRef<HTMLButtonElement>(null);
 
@@ -71,6 +79,12 @@ const Button: React.FC<ButtonProps> = ({
         cls[`${colorView}`],
         cls[`${iconPosition}`]
       )}
+      style={{
+        width: width,
+        height: height,
+        padding: padding,
+        margin: margin
+      }}
     >
       {loading ? (
         <div className={cls.wrap}>

@@ -55,7 +55,8 @@ StoryComponent.args = {
   view: 'green',
   colorView: 'full',
   iconSize: 14,
-  iconPosition: 'left'
+  iconPosition: 'left',
+  width: '100%'
 };
 
 // StoryComponent.story = {
