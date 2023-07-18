@@ -81,7 +81,14 @@ const options: RollupOptions[] = [
       svgr(),
       copy({ targets: [{ src: 'src/assets/styles/fonts', dest: 'lib' }] })
     ],
-    external: ['react', 'react-dom', 'classnames', 'antd', 'lodash']
+    external: [
+      'react',
+      'react-dom',
+      'classnames',
+      'antd',
+      'lodash',
+      'react-hook-form'
+    ]
   },
   {
     input: './src/assets/styles/main.scss',
