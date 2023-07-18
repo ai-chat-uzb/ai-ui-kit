@@ -1,4 +1,4 @@
-// input.stories.tsx
+// Password.stories.tsx
 
 import React from 'react';
 
@@ -6,24 +6,24 @@ import { StoryObj, Meta } from '@storybook/react';
 import { useForm } from 'react-hook-form';
 import Button from '../button/button';
 
-import Input, { InputProps } from './input';
+import Password, { PasswordProps } from './password';
 
 export default {
-  title: 'Components/Input',
-  component: Input,
+  title: 'Components/Password',
+  component: Password,
   argTypes: {}
-} as Meta<typeof Input>;
+} as Meta<typeof Password>;
 
-export const Story: StoryObj<typeof Input> = (
-  props: JSX.IntrinsicAttributes & InputProps
+export const Story: StoryObj<typeof Password> = (
+  props: JSX.IntrinsicAttributes & PasswordProps
 ) => {
   const {
     handleSubmit,
     control,
     reset,
     formState: { errors }
-  } = useForm<{ firstName: string }>({
-    defaultValues: { firstName: '' }
+  } = useForm<{ password: string }>({
+    defaultValues: { password: '' }
   });
 
   const onSubmit = values => {
@@ -32,13 +32,12 @@ export const Story: StoryObj<typeof Input> = (
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Input
-        errorMsg={errors.firstName?.message}
+      <Password
+        errorMsg={errors.password?.message}
         {...props}
         control={control}
-        name="firstName"
-        type="email"
-        placeholder="Email"
+        name="password"
+        placeholder="password"
       />
       <div style={{ display: 'flex', marginTop: 32, gap: 20 }}>
         <Button size={'small'} colorView={'full'} view={'line'}>
