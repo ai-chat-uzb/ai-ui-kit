@@ -17,6 +17,7 @@ export interface ButtonProps
   children?: string;
   iconName?: ListProps;
   iconSize?: number;
+  iconPosition?: 'right' | 'left';
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -30,7 +31,8 @@ const Button: React.FC<ButtonProps> = ({
   view,
   colorView,
   iconName,
-  iconSize
+  iconSize,
+  iconPosition = 'left'
 }) => {
   const ref = useRef<HTMLButtonElement>(null);
 
@@ -66,7 +68,8 @@ const Button: React.FC<ButtonProps> = ({
         className,
         cls[`${size}`],
         cls[`${view}`],
-        cls[`${colorView}`]
+        cls[`${colorView}`],
+        cls[`${iconPosition}`]
       )}
     >
       {loading ? (

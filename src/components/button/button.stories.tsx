@@ -34,6 +34,10 @@ export default {
     },
     iconSize: {
       control: 'number'
+    },
+    iconPosition: {
+      options: ['right', 'left'],
+      control: { type: 'select' }
     }
   }
 } as Meta<typeof Button>;
@@ -50,7 +54,8 @@ StoryComponent.args = {
   disabled: false,
   view: 'green',
   colorView: 'full',
-  iconSize: 14
+  iconSize: 14,
+  iconPosition: 'left'
 };
 
 // StoryComponent.story = {
