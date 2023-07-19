@@ -1,9 +1,9 @@
 .wrapper {
   display: block;
+  text-decoration: none;
 
   &.linear-gradient {
     display: inline-block;
-    background-clip: text !important;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
