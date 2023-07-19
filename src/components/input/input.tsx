@@ -41,7 +41,7 @@ const Input: React.FC<InputProps> = ({
   errorMsg,
   maxLength,
   min,
-  iconName = 'mail',
+  iconName,
   ...args
 }) => (
   <div className={cx(cls.wrapper, className && className)} style={{ width }}>
