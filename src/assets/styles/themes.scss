@@ -63,6 +63,7 @@
   --color-red-power-1: #fbecec;
   --color-red-power-2: #d0302f;
   --color-red-power-3: #2f0f0e;
+  --color-glass-modal: rgba(26, 29, 33, 0.96);
   --color-green-blue-day-blue-600: linear-gradient(
     225deg,
     #3045c9 0%,
@@ -89,5 +90,34 @@
   );
   --color-green-blue: linear-gradient(225deg, #82dbf7 0%, #b6f09c 100%);
   --color-blue-green: linear-gradient(45deg, #82dbf7 0%, #b6f09c 100%);
-  --color-glass-modal: rgba(26, 29, 33, 0.96);
+  --webkit-green-blue-day-blue-600: linear-gradient(
+    225deg,
+    #3045c9 0%,
+    #65beda 45.31%,
+    #9ad37f 100%
+  );
+  --webkit-day-blue-blue-green-600: linear-gradient(
+    45deg,
+    #3045c9 0%,
+    #65beda 45.31%,
+    #9ad37f 100%
+  );
+  --webkit-green-blue-day-blue-500: linear-gradient(
+    225deg,
+    #4d62e5 0%,
+    #87ddee 45.31%,
+    #b6f09c 100%
+  );
+  --webkit-day-blue-blue-green-500: linear-gradient(
+    45deg,
+    #4d62e5 0%,
+    #87ddee 45.31%,
+    #b6f09c 100%
+  );
+  --webkit-green-blue: linear-gradient(
+    225deg,
+    #82dbf7 0%,
+    #b6f09c 100%
+  );
+  --webkit-blue-green: linear-gradient(45deg, #82dbf7 0%, #b6f09c 100%);
 }
