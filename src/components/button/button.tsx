@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { ReactNode, useRef } from 'react';
 import { ButtonProps as BaseButtonProps } from 'antd/lib/button/button';
 import cx from 'classnames';
 
@@ -14,7 +14,7 @@ export interface ButtonProps
   size: 'small' | 'medium' | 'large';
   colorView: 'full' | 'lighter' | 'very-light';
   view: 'green' | 'line' | 'tertiary' | 'outline' | 'glass';
-  children?: string;
+  children?: ReactNode | string;
   iconName?: ListProps;
   iconSize?: number;
   iconPosition?: 'right' | 'left';

@@ -15,6 +15,7 @@ export interface TypographyProps {
   tagName?: 'p' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
   textAlign?: 'center' | 'start' | 'end';
   linearGradients?: boolean;
+  className?: string;
 }
 
 const Typography: React.FC<TypographyProps> = ({
@@ -28,7 +29,8 @@ const Typography: React.FC<TypographyProps> = ({
   margin = 0,
   tagName = 'p',
   textAlign = 'start',
-  linearGradients
+  linearGradients,
+  className
 }) => {
   const Tag = tagName as keyof JSX.IntrinsicElements;
 
@@ -45,7 +47,11 @@ const Typography: React.FC<TypographyProps> = ({
         textAlign: textAlign,
         background: `var(${linearGradients && color})`
       }}
-      className={cx(cls.wrapper, linearGradients && cls['linear-gradient'])}
+      className={cx(
+        cls.wrapper,
+        linearGradients && cls['linear-gradient'],
+        className && className
+      )}
     >
       {children}
     </Tag>

@@ -35,7 +35,7 @@ const Password: React.FC<PasswordProps> = ({
   height = 48,
   placeholder,
   label,
-  errorMsg = 'Error handler',
+  errorMsg,
   maxLength,
   min,
   ...args
