@@ -1,0 +1,18 @@
+.wrapper {
+  position: relative;
+  display: block;
+}
+
+:global(.ant-divider) {
+  &::before,
+  &::after {
+    border-color: var(--color-black-5) !important;
+  }
+}
+
+:global(.ant-divider-inner-text) {
+  padding: 0 16px !important;
+  color: var(--color-black-4) !important;
+  background: var(--color-black-5) !important;
+  border-radius: 6px !important;
+}

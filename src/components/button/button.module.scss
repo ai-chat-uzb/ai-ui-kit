@@ -231,6 +231,16 @@
     font-weight: inherit;
     font-size: inherit;
   }
+
+  &.right {
+    .text {
+      order: 1;
+    }
+
+    span {
+      order: 2;
+    }
+  }
 }
 
 @keyframes animate {
