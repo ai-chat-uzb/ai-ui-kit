@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { ReactNode, useRef } from 'react';
 import { ButtonProps as BaseButtonProps } from 'antd/lib/button/button';
 import cx from 'classnames';
 
@@ -14,9 +14,14 @@ export interface ButtonProps
   size: 'small' | 'medium' | 'large';
   colorView: 'full' | 'lighter' | 'very-light';
   view: 'green' | 'line' | 'tertiary' | 'outline' | 'glass';
-  children?: string;
+  children?: ReactNode | string;
   iconName?: ListProps;
   iconSize?: number;
+  iconPosition?: 'right' | 'left';
+  width?: string | number;
+  height?: string | number;
+  padding?: string | number;
+  margin?: string | number;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -30,7 +35,12 @@ const Button: React.FC<ButtonProps> = ({
   view,
   colorView,
   iconName,
-  iconSize
+  iconSize,
+  iconPosition = 'left',
+  width,
+  height,
+  padding,
+  margin
 }) => {
   const ref = useRef<HTMLButtonElement>(null);
 
@@ -66,8 +76,15 @@ const Button: React.FC<ButtonProps> = ({
         className,
         cls[`${size}`],
         cls[`${view}`],
-        cls[`${colorView}`]
+        cls[`${colorView}`],
+        cls[`${iconPosition}`]
       )}
+      style={{
+        width: width,
+        height: height,
+        padding: padding,
+        margin: margin
+      }}
     >
       {loading ? (
         <div className={cls.wrap}>

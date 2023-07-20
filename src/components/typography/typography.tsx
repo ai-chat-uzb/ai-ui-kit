@@ -1,6 +1,7 @@
 import React from 'react';
+import cx from 'classnames';
 
-import classes from './typography.module.scss';
+import cls from './typography.module.scss';
 
 export interface TypographyProps {
   children: React.ReactNode;
@@ -13,6 +14,8 @@ export interface TypographyProps {
   margin?: string | number;
   tagName?: 'p' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
   textAlign?: 'center' | 'start' | 'end';
+  linearGradients?: boolean;
+  className?: string;
 }
 
 const Typography: React.FC<TypographyProps> = ({
@@ -25,7 +28,9 @@ const Typography: React.FC<TypographyProps> = ({
   padding = 0,
   margin = 0,
   tagName = 'p',
-  textAlign = 'start'
+  textAlign = 'start',
+  linearGradients,
+  className
 }) => {
   const Tag = tagName as keyof JSX.IntrinsicElements;
 
@@ -36,12 +41,17 @@ const Typography: React.FC<TypographyProps> = ({
         lineHeight: `${lineHeight}px`,
         fontWeight: weight,
         letterSpacing: spacing,
-        color: `var(${color})`,
+        color: `var(${!linearGradients && color})`,
         padding: padding,
         margin: margin,
-        textAlign: textAlign
+        textAlign: textAlign,
+        background: `var(${linearGradients && color})`
       }}
-      className={classes.wrapper}
+      className={cx(
+        cls.wrapper,
+        linearGradients && cls['linear-gradient'],
+        className && className
+      )}
     >
       {children}
     </Tag>

@@ -1,35 +1,14 @@
 import React from 'react';
-import cx from 'classnames';
+import { Divider as AsDivider, DividerProps as BaseDividerProps } from 'antd';
 
-import cls from './divider.module.scss';
+import './divider.module.scss';
 
-export interface DividerProps {
-  className?: string;
-  backgroundColor?: string;
-  width?: number | string;
-  height?: number | string;
-  padding?: string | number;
-  margin?: string | number;
+export interface DividerProps extends BaseDividerProps {
+  width?: string | number;
 }
 
-const Divider: React.FC<DividerProps> = ({
-  className,
-  backgroundColor = '--color-black-1',
-  width = '100%',
-  height = '100%',
-  padding = 0,
-  margin = 0
-}) => (
-  <div
-    className={cx(cls.wrapper, className && className)}
-    style={{
-      background: `var(${backgroundColor})`,
-      width: width,
-      height: height,
-      padding: padding,
-      margin: margin
-    }}
-  ></div>
+const Divider: React.FC<DividerProps> = ({ width, ...props }) => (
+  <AsDivider style={{ width: width }} {...props} />
 );
 
 export default Divider;

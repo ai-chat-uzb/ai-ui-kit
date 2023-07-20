@@ -25,6 +25,9 @@ export default {
     color: {
       options: 'string'
     },
+    linearGradients: {
+      options: 'boolean'
+    },
     padding: {
       options: ['string', 'number']
     },
@@ -54,9 +57,10 @@ Story.args = {
   weight: 500,
   lineHeight: 24,
   spacing: 0.5,
-  color: '--color-heisenberg-5',
+  color: '--webkit-green-blue-day-blue-500',
   padding: 0,
   margin: 0,
   tagName: 'div',
-  textAlign: 'center'
+  textAlign: 'center',
+  linearGradients: true
 };

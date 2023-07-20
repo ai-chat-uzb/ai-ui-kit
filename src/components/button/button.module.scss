@@ -96,7 +96,7 @@
   &.full {
     &.green {
       color: var(--color-black-9);
-      background: var(--color-green-4);
+      background: var(--color-green-5);
     }
 
     &.line {
@@ -230,6 +230,16 @@
     margin: 0;
     font-weight: inherit;
     font-size: inherit;
+  }
+
+  &.right {
+    .text {
+      order: 1;
+    }
+
+    span {
+      order: 2;
+    }
   }
 }
 
