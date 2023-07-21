@@ -18,3 +18,11 @@
     }
   }
 }
+
+:global(.dropdown-wrap ul) {
+  background-color: var(--color-black-7) !important;
+}
+
+:global(.dropdown-wrap ul span) {
+  color: var(--color-white) !important;
+}

@@ -37,7 +37,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   return (
     <div className={cx(cls.wrapper, className && className)}>
       <div className={cls.selected} onClick={() => setOpen(!open)}>
-        <Avatar status="online" avatarUrl={selectedAccount.avatarUrl} />
+        <Avatar avatarUrl={selectedAccount.avatarUrl} />
         <div className={cls.info}>
           <Typography
             size={16}
@@ -65,20 +65,19 @@ const Dropdown: React.FC<DropdownProps> = ({
           )}
         </div>
       </div>
-      {open && (
-        <div className={cx(cls['sub-wrapper'], open && cls.opened)}>
-          {accounts.map(item => (
-            <div className={cls.wrap}>
-              <UserCard
-                avatarUrl={item.avatarUrl}
-                title={item.title}
-                subTitle={item.subTitle}
-                onClick={() => onClick(item.id)}
-              />
-            </div>
-          ))}
-        </div>
-      )}
+
+      <div className={cx(cls['sub-wrapper'], open && cls.opened)}>
+        {accounts.map(item => (
+          <div className={cls.wrap}>
+            <UserCard
+              avatarUrl={item.avatarUrl}
+              title={item.title}
+              subTitle={item.subTitle}
+              onClick={() => onClick(item.id)}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
