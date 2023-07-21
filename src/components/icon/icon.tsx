@@ -37,7 +37,12 @@ const Icon: React.FC<IIconProps> = ({
     <span
       className={cx(classes.wrapper, className)}
       onClick={onClick}
-      style={{ ...{ '--size': `${size}px` }, color } as React.CSSProperties}
+      style={
+        {
+          ...{ '--size': `${size}px` },
+          color: `var(${color})`
+        } as React.CSSProperties
+      }
       data-cy={cy}
     >
       {
