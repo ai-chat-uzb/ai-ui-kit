@@ -117,6 +117,8 @@
         "exports": "only-multiline",
         "functions": "never"
       }
-    ]
+    ],
+    "no-return-await": "off",
+    "@typescript-eslint/return-await": "error"
   }
 }

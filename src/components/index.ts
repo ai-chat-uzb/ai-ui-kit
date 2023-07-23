@@ -2,6 +2,7 @@ export { default as Alert } from './alert/alert';
 export { default as Avatar } from './avatar/avatar';
 export { default as Button } from './button/button';
 export { default as Color } from './color/color';
+export { default as CopyBoard } from './copy-board/copy-board';
 export { default as Divider } from './divider/divider';
 export { default as Dropdown } from './dropdown/dropdown';
 export { default as Icons } from './icon/icon';

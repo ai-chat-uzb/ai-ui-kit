@@ -69,10 +69,23 @@
   }
 
   :global(.ant-tabs-content-holder) {
+    position: relative;
     padding: 20px !important;
+    color: white !important;
     background: var(--color-black-7);
     @media screen and (max-width: 750px) {
       padding: 10px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 112px;
+      background: linear-gradient(to top, rgba(19, 22, 25, 0) 0%, #131619 100%);
+      content: '';
     }
   }
 }
