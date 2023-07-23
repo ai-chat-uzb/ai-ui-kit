@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icons } from 'components';
+import Icons from 'components/icon';
 
 import cls from './avatar.module.scss';
 

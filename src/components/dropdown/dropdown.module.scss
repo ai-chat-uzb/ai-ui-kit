@@ -1,0 +1,63 @@
+.wrapper {
+  display: block;
+  cursor: pointer;
+
+  svg {
+    color: var(--color-black-4);
+    transition: all linear 0.225s;
+  }
+
+  &:hover {
+    svg {
+      color: var(--color-green-5) !important;
+    }
+
+    path {
+      filter: drop-shadow(0 4px 6px rgba(182, 240, 156, 0.16))
+        drop-shadow(0 10px 15px rgba(182, 240, 156, 0.16)) !important;
+    }
+  }
+}
+
+:global(.ant-dropdown-menu) {
+  display: flex;
+  flex-direction: column;
+  gap: 6px !important;
+  padding: 6px !important;
+  background: var(--glass-modal, rgba(26, 29, 33, 0.96)) !important;
+  border: 0 solid var(--glass-stroke, rgba(255, 255, 255, 0.08)) !important;
+  border-radius: 16px;
+  box-shadow: 0 8px 12px 0 rgba(255, 255, 255, 0.04) inset,
+    0 24px 64px -16px rgba(0, 0, 0, 0.24),
+    16px 24px 64px -24px rgba(255, 255, 255, 0.04) inset !important;
+}
+
+:global(.ant-dropdown-menu-item) {
+  color: var(--color-white) !important;
+  font-weight: 500;
+  font-size: 14px !important;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 20px;
+  background: var(
+    --glass-fill,
+    linear-gradient(
+      145deg,
+      rgba(215, 237, 237, 0.16) 0%,
+      rgba(204, 235, 235, 0.06) 100%
+    )
+  ) !important;
+  border-top: 1px solid var(--glass-stroke, rgba(255, 255, 255, 0.08)) !important;
+  border-radius: 8px !important;
+  transition: all linear 0.25s !important;
+
+  &:hover {
+    background: var(
+      --glass-fill,
+      linear-gradient(
+        145deg,
+        rgba(215, 237, 237, 0.36) 0%,
+        rgba(204, 235, 235, 0.2) 100%
+      )
+    ) !important;
+  }
+}
