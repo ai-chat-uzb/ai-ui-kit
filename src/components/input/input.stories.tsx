@@ -37,8 +37,8 @@ export const Story: StoryObj<typeof Input> = (
         {...props}
         control={control}
         name="firstName"
-        type="email"
-        placeholder="Email"
+        type="text"
+        placeholder="Name"
       />
       <div style={{ display: 'flex', marginTop: 32, gap: 20 }}>
         <Button size={'small'} colorView={'full'} view={'line'}>
