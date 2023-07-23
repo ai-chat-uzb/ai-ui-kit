@@ -12,4 +12,5 @@ export { default as Password } from './password/password';
 export { default as Tabs } from './tabs/tabs';
 export { default as toast } from './toast/toast';
 export { default as Typography } from './typography/typography';
+export { default as UserContent } from './user-content/user-content';
 export { default as UserList } from './user-list/user-list';
