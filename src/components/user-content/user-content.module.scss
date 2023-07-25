@@ -1,36 +1,85 @@
 .wrapper {
-  display: 100%;
-  padding: 16px;
-  border: 1px solid var(--noble-black-600, #1a1d21);
-  border-radius: 16px;
+  display: flex;
+  justify-content: flex-start;
 
-  .top-container {
-    display: flex;
-    gap: 24px;
-    align-items: center;
+  .position-container {
+    width: 75%;
+    padding: 16px;
+    background: var(
+      --glass-fill,
+      linear-gradient(
+        145deg,
+        rgba(215, 237, 237, 0.16) 0%,
+        rgba(204, 235, 235, 0.06) 100%
+      )
+    );
+    border: 1px solid var(--color-black-6);
+    border-radius: 10px 24px 24px;
 
-    .avatar-image {
-      width: 48px;
-      height: 48px;
-      border-radius: 20px;
+    .top-container {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+
+      .avatar-image {
+        width: 48px;
+        height: 48px;
+        border-radius: 20px;
+      }
+
+      .text-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - 24px - 48px);
+
+        .name-container {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+        }
+      }
     }
 
-    .text-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: calc(100% - 24px - 48px);
-
-      .name-container {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-      }
+    .description-container {
+      width: calc(100%);
+      padding-left: 72px;
+    }
+    @media screen and (max-width: 1100px) {
+      width: 90%;
     }
   }
 
-  .description-container {
-    width: calc(100%);
-    padding-left: 72px;
+  &.author {
+    justify-content: flex-end;
+
+    .position-container {
+      background: var(--color-chat-1);
+      border-radius: 24px 24px 10px;
+    }
+
+    .top-container {
+      .text-container {
+        width: 100%;
+      }
+    }
+
+    .description-container {
+      margin-top: 5px;
+      padding-left: 0;
+    }
+  }
+
+  &.private {
+    .top-container {
+      .text-container {
+        width: 100%;
+      }
+    }
+
+    .description-container {
+      margin-top: 5px;
+      padding-left: 0;
+    }
   }
 }

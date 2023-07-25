@@ -8,9 +8,15 @@ import cls from './copy-board.module.scss';
 
 export interface CopyBoardProps {
   text: string;
+  iconColor?: string;
+  iconSize?: number;
 }
 
-const CopyBoard: React.FC<CopyBoardProps> = ({ text }) => {
+const CopyBoard: React.FC<CopyBoardProps> = ({
+  text,
+  iconColor = '--color-black-4',
+  iconSize = 24
+}) => {
   const [copy, setCopy] = useState(false);
 
   async function copyTextToClipboard(text) {
@@ -41,7 +47,7 @@ const CopyBoard: React.FC<CopyBoardProps> = ({ text }) => {
       onClick={() => handleCopyClick()}
       className={cx(cls.wrapper, copy ? cls.copy : cls['no-copy'])}
     >
-      <Icon name={copy ? 'check' : 'copy'} size={20} color="--color-black-4" />
+      <Icon name={copy ? 'check' : 'copy'} size={iconSize} color={iconColor} />
     </button>
   );
 };

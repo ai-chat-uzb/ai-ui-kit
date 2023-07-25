@@ -241,6 +241,10 @@
       order: 2;
     }
   }
+
+  &:disabled {
+    cursor: no-drop;
+  }
 }
 
 @keyframes animate {

@@ -36,6 +36,7 @@ export const COLOR_VARIABLE: string[] = [
   '--color-purple-7',
   '--color-purple-8',
   '--color-purple-9',
+  '--color-chat-1',
   '--color-sunglow-1',
   '--color-sunglow-2',
   '--color-sunglow-3',
