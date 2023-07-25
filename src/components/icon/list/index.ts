@@ -146,6 +146,7 @@ export { default as mailTwo } from './mailtwo';
 export { default as microphone } from './microphone';
 export { default as note } from './note';
 export { default as octagon } from './octagon';
+export { default as offline } from './offline';
 export { default as padlock } from './padlock';
 export { default as padLockOpen } from './padlock-open';
 export { default as pencil } from './pencil';

@@ -21,7 +21,7 @@ const Disturb: React.FC = () => (
       height="28"
       rx="14"
       stroke="#131619"
-      stroke-width="8"
+      strokeWidth="8"
     />
     <defs>
       <filter
@@ -31,9 +31,9 @@ const Disturb: React.FC = () => (
         width="43.0371"
         height="43.0371"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"

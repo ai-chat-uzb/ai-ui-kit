@@ -14,7 +14,7 @@ const Offline: React.FC = () => (
       r="14"
       fill="#363A3D"
       stroke="#131619"
-      stroke-width="8"
+      strokeWidth="8"
     />
   </svg>
 );
