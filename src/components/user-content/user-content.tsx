@@ -13,6 +13,7 @@ export interface UserContentProps extends Pick<AvatarProps, 'status' | 'url'> {
   date: string;
   author: boolean;
   chat: 'private' | 'group';
+  consecutively?: boolean;
 }
 
 const UserContent: React.FC<UserContentProps> = ({
@@ -22,24 +23,27 @@ const UserContent: React.FC<UserContentProps> = ({
   url,
   status,
   author,
-  chat
+  chat,
+  consecutively
 }) => (
   <div
     className={cx(
       cls.wrapper,
       author && cls.author,
-      chat === 'private' && cls.private
+      chat === 'private' && cls.private,
+      consecutively && cls.consecutively
     )}
   >
     <div className={cls['position-container']}>
       <div className={cls['top-container']}>
         {chat === 'group'
-          ? !author && <Avatar url={url} status={status} />
+          ? !author && !consecutively && <Avatar url={url} status={status} />
           : ''}
         <div className={cls['text-container']}>
           <div className={cls['name-container']}>
             {chat === 'group'
-              ? !author && (
+              ? !author &&
+                !consecutively && (
                   <Typography
                     size={16}
                     weight={600}
@@ -59,11 +63,7 @@ const UserContent: React.FC<UserContentProps> = ({
               color="--color-white"
             />
           </div>
-          <CopyBoard
-            text={description}
-            iconColor="--color-white"
-            iconSize={24}
-          />
+          <CopyBoard text={description} />
         </div>
       </div>
       <div className={cls['description-container']}>
