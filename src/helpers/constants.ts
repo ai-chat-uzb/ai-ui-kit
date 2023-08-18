@@ -1,5 +1,6 @@
 export const COLOR_VARIABLE: string[] = [
   '--color-white',
+  '--color-black',
   '--color-green-1',
   '--color-green-2',
   '--color-green-3',

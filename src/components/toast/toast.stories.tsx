@@ -16,7 +16,7 @@ export default {
 export const Story = (props: JSX.IntrinsicAttributes) => (
   <div>
     <Button
-      onClick={() => toast.error('hello world')}
+      onClick={() => toast.success('hello world')}
       size="large"
       colorView="full"
       view="glass"

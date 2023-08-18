@@ -19,5 +19,22 @@
     display: flex;
     gap: 16px;
     align-items: center;
+    justify-content: center;
+    height: max-content;
+
+    .text-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+
+  &.small {
+    padding: 10px;
+
+    .text-wrap {
+      height: 40px;
+    }
   }
 }

@@ -1,4 +1,4 @@
-// user-list.stories.tsx
+// user-card.stories.tsx
 
 import React from 'react';
 
@@ -6,18 +6,18 @@ import Dropdown from '../dropdown/dropdown';
 
 import { StoryObj, Meta } from '@storybook/react';
 
-import UserList, { UserListProps } from './user-list';
+import UserCard, { UserCardProps } from './user-card';
 import { MenuProps } from 'antd';
 
 export default {
-  title: 'Components/UserList',
-  component: UserList,
+  title: 'Components/UserCard',
+  component: UserCard,
   argTypes: {}
-} as Meta<typeof UserList>;
+} as Meta<typeof UserCard>;
 
-export const Story: StoryObj<typeof UserList> = (
-  props: JSX.IntrinsicAttributes & UserListProps
-) => <UserList {...props} />;
+export const Story: StoryObj<typeof UserCard> = (
+  props: JSX.IntrinsicAttributes & UserCardProps
+) => <UserCard {...props} />;
 
 const items: MenuProps['items'] = [
   {
@@ -73,5 +73,6 @@ Story.args = {
         iconSize={24}
       />
     </>
-  )
+  ),
+  size: 'large'
 };

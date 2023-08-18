@@ -4,6 +4,8 @@
 
   .position-container {
     width: 75%;
+    width: max-content;
+    max-width: 90%;
     padding: 16px;
     background: var(
       --glass-fill,

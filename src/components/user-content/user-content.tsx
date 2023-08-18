@@ -63,7 +63,7 @@ const UserContent: React.FC<UserContentProps> = ({
               color="--color-white"
             />
           </div>
-          <CopyBoard text={description} />
+          <CopyBoard text={description} iconColor="--color-white" />
         </div>
       </div>
       <div className={cls['description-container']}>
