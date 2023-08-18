@@ -47,7 +47,7 @@ const Avatar: React.FC<AvatarProps> = ({
         <img src={url} alt="avatar not found" className={cls['avatar-image']} />
       )}
       {!url && name && handleName(name)}
-      {status === 'off' && (
+      {!(status === 'off') && (
         <div className={cls['avatar-status']}>
           {
             // @ts-ignore
