@@ -8,9 +8,9 @@ import cls from './user-card.module.scss';
 
 export interface UserCardProps
   extends Pick<AvatarProps, 'status' | 'url' | 'size'> {
-  rightElement: React.ReactNode;
-  title?: string;
-  username?: string;
+  rightElement?: React.ReactNode;
+  title: string;
+  username: string;
 }
 
 const UserCard: React.FC<UserCardProps> = ({

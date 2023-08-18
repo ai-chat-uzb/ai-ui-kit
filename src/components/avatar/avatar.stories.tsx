@@ -14,7 +14,7 @@ export default {
       options: 'string'
     },
     status: {
-      options: ['active', 'disturb', 'away', 'offline'],
+      options: ['active', 'disturb', 'away', 'offline', 'off'],
       control: { type: 'select' }
     },
     size: {

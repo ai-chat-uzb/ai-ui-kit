@@ -7,7 +7,7 @@ import cls from './avatar.module.scss';
 
 export interface AvatarProps {
   url?: string;
-  status?: 'active' | 'disturb' | 'away' | 'offline';
+  status?: 'active' | 'disturb' | 'away' | 'offline' | 'off';
   onClick?: () => void;
   size?: 'small' | 'large';
   name?: string;
@@ -30,7 +30,7 @@ const Avatar: React.FC<AvatarProps> = ({
             ''
           )
           .toLocaleUpperCase()
-      : String(name.slice(0, 2)).toLocaleUpperCase();
+      : String(value.slice(0, 2)).toLocaleUpperCase();
   };
 
   return (
@@ -47,7 +47,7 @@ const Avatar: React.FC<AvatarProps> = ({
         <img src={url} alt="avatar not found" className={cls['avatar-image']} />
       )}
       {!url && name && handleName(name)}
-      {status && (
+      {status === 'off' && (
         <div className={cls['avatar-status']}>
           {
             // @ts-ignore
