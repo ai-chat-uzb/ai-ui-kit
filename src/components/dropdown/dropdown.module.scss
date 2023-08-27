@@ -61,3 +61,24 @@
     ) !important;
   }
 }
+
+:global(.custom-dropdown-menu) {
+  span {
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    text-align: center;
+  }
+}
+
+:global(.custom-dropdown-menu ul) {
+  padding: 6px !important;
+}
+
+:global(.custom-dropdown-menu li) {
+  padding: 6px 12px !important;
+}

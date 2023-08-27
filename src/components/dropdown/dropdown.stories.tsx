@@ -57,7 +57,6 @@ const items: MenuProps['items'] = [
 ];
 
 Story.args = {
-  children: 'Hello Dropdown',
   trigger: ['click'],
   placement: 'bottom',
   menu: { items },

@@ -13,9 +13,14 @@ export interface DropdownProps extends BaseDropdownProps {
   iconSize?: number;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ iconName, iconSize, ...args }) => (
+const Dropdown: React.FC<DropdownProps> = ({
+  iconName,
+  iconSize,
+  menu,
+  ...args
+}) => (
   <div className={cls.wrapper}>
-    <BaseDropdown {...args}>
+    <BaseDropdown overlayClassName="custom-dropdown-menu" menu={menu} {...args}>
       {iconName && <Icon name={iconName} size={iconSize} />}
     </BaseDropdown>
   </div>
