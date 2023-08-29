@@ -14,6 +14,11 @@
   );
   border-top: 1px solid var(--glass-stroke, rgba(255, 255, 255, 0.08));
   border-radius: 16px;
+  transition: all linear 0.3s;
+
+  &.click {
+    cursor: pointer;
+  }
 
   .left {
     display: flex;
@@ -36,5 +41,16 @@
     .text-wrap {
       height: 40px;
     }
+  }
+
+  &:hover {
+    background: var(
+      --glass-fill,
+      linear-gradient(
+        145deg,
+        rgba(215, 237, 237, 0.2) 0%,
+        rgba(204, 235, 235, 0.1) 100%
+      )
+    );
   }
 }

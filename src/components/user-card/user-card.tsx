@@ -11,6 +11,8 @@ export interface UserCardProps
   rightElement?: React.ReactNode;
   title: string;
   username: string;
+  onClick?: () => void;
+  className?: string;
 }
 
 const UserCard: React.FC<UserCardProps> = ({
@@ -19,12 +21,23 @@ const UserCard: React.FC<UserCardProps> = ({
   title,
   username,
   rightElement,
-  size = 'large'
+  size = 'large',
+  onClick,
+  className
 }) => {
   const sizeBoolean = size === 'small';
 
   return (
-    <div className={cx(cls.wrapper, cls[size])}>
+    <div
+      className={cx(
+        cls.wrapper,
+        cls[size],
+        onClick && cls.click,
+        className,
+        cls[`${className}`]
+      )}
+      onClick={onClick}
+    >
       <div className={cls.left}>
         <Avatar url={url} size={size} status={status} name={title} />
         <div className={cls['text-wrap']}>
