@@ -33,6 +33,10 @@
       }
     }
 
+    &.not-label {
+      margin-top: 0;
+    }
+
     .container-input {
       position: relative;
       z-index: 2;

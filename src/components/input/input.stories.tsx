@@ -58,6 +58,5 @@ export const Story: StoryObj<typeof Input> = (
 };
 
 Story.args = {
-  placeholder: 'Name',
-  label: 'Label'
+  placeholder: 'Name'
 };

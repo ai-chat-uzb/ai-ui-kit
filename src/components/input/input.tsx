@@ -54,7 +54,8 @@ const Input: React.FC<InputProps> = ({
       className={cx(
         cls.container,
         iconName && cls['icon-name'],
-        errorMsg && cls.error
+        errorMsg && cls.error,
+        !label && cls['not-label']
       )}
     >
       {iconName && (
