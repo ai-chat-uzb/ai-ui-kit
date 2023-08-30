@@ -64,16 +64,22 @@ Story.args = {
   title: 'Ryan Lee',
   username: '@ryanlee',
   className: '',
-  rightElement: (
-    <>
-      <Dropdown
-        menu={{ items }}
-        trigger={['click']}
-        placement={'bottomLeft'}
-        iconName="settings"
-        iconSize={24}
-      />
-    </>
-  ),
-  size: 'large'
+  // rightElement: (
+  //   <>
+  //     <Dropdown
+  //       menu={{ items }}
+  //       trigger={['click']}
+  //       placement={'bottomLeft'}
+  //       iconName="settings"
+  //       iconSize={24}
+  //     />
+  //   </>
+  // ),
+  size: 'large',
+  history: {
+    photoUrl:
+      'https://firebasestorage.googleapis.com/v0/b/ai-chat-c50cc.appspot.com/o/Person%3DEmily%20Liu.svg?alt=media&token=e20ad0ee-e6bb-4ae6-aee4-4b44e26084a7',
+    text: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a text commonly used to demonstrate the visual form of a document or a',
+    username: 'Naruto'
+  }
 };

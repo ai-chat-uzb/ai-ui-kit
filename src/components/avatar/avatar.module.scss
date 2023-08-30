@@ -49,6 +49,23 @@
     }
   }
 
+  &.very-small {
+    width: 30px;
+    height: 30px;
+    border-radius: 12px;
+
+    .avatar-image {
+      border-radius: 5px;
+    }
+
+    .avatar-status {
+      top: -1px;
+      right: -1px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
   &.active-name {
     color: var(--color-black);
     font-weight: 500;

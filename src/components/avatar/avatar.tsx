@@ -9,7 +9,7 @@ export interface AvatarProps {
   url?: string;
   status?: 'active' | 'disturb' | 'away' | 'offline' | 'off';
   onClick?: () => void;
-  size?: 'small' | 'large';
+  size?: 'small' | 'large' | 'very-small';
   name?: string;
 }
 
@@ -33,6 +33,7 @@ const Avatar: React.FC<AvatarProps> = ({
       : String(value.slice(0, 2)).toLocaleUpperCase();
   };
 
+  console.log(size);
   return (
     <div
       onClick={onClick}
