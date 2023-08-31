@@ -5,7 +5,7 @@
   .container {
     position: relative;
     display: flex;
-    justify-content: enter;
+    justify-content: center;
     width: 100%;
     height: 48px;
     margin-top: 16px;
@@ -43,7 +43,7 @@
       width: 100%;
       height: 100%;
       padding: 0 16px;
-      color: var(--color-white);
+      color: var(--color-black-3);
       font-weight: 500;
       font-size: 16px;
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -63,7 +63,7 @@
       }
 
       &::placeholder {
-        color: var(--color-black-3);
+        color: var(--color-black-5);
       }
 
       &::-webkit-outer-spin-button,
@@ -83,6 +83,21 @@
 
       &:-internal-autofill-selected {
         background-color: var(--color-black-6) !important;
+      }
+    }
+
+    .chat {
+      background: transparent;
+
+      & ~ .input-state {
+        background: transparent;
+      }
+
+      &:focus {
+        & ~ .input-state {
+          background: transparent;
+          box-shadow: 0 0 0 4px transparent;
+        }
       }
     }
 

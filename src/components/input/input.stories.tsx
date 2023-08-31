@@ -58,5 +58,7 @@ export const Story: StoryObj<typeof Input> = (
 };
 
 Story.args = {
-  placeholder: 'Name'
+  placeholder: 'Name',
+  chat: true,
+  height: 50
 };

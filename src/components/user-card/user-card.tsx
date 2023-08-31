@@ -16,8 +16,8 @@ export interface UserCardProps
   type?: 'group' | 'personal';
   history?: {
     text: string;
-    photoUrl: string;
-    username: string;
+    photoUrl?: string;
+    username?: string;
   };
 }
 
@@ -71,7 +71,7 @@ const UserCard: React.FC<UserCardProps> = ({
               className={cls.username}
             />
           </div>
-          {
+          {history && (
             <div className={cls['history-wrapper']}>
               {type === 'group' && (
                 <div className={cls['history-row']}>
@@ -109,7 +109,7 @@ const UserCard: React.FC<UserCardProps> = ({
                 />
               </div>
             </div>
-          }
+          )}
         </div>
       </div>
       <div className={cls.right}>{rightElement}</div>

@@ -45,10 +45,11 @@
         border-radius: 8px;
 
         .history-row {
+          width: 100%;
+
           .last-text {
             width: 100%;
             max-width: 100%;
-            height: 36px;
             max-height: 36px;
             overflow-y: auto;
           }

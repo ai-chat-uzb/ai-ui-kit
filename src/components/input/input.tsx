@@ -26,6 +26,7 @@ export interface InputProps
   height?: number;
   errorMsg?: string;
   iconName?: ListProps;
+  chat?: boolean;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -42,6 +43,7 @@ const Input: React.FC<InputProps> = ({
   maxLength,
   min,
   iconName,
+  chat = false,
   ...args
 }) => (
   <div className={cx(cls.wrapper, className && className)} style={{ width }}>
@@ -71,7 +73,8 @@ const Input: React.FC<InputProps> = ({
             {...field}
             className={cx(
               cls['container-input'],
-              className && `${className}-input`
+              className && `${className}-input`,
+              chat && cls.chat
             )}
             type={type}
             disabled={disabled}

@@ -33,7 +33,6 @@ const Avatar: React.FC<AvatarProps> = ({
       : String(value.slice(0, 2)).toLocaleUpperCase();
   };
 
-  console.log(size);
   return (
     <div
       onClick={onClick}
