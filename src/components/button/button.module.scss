@@ -20,6 +20,24 @@
     box-shadow: 0 0 16px var(--color-green-4);
   }
 
+  &.icon-hover {
+    .icon {
+      svg {
+        transition: all linear 0.3s;
+      }
+    }
+
+    &:hover {
+      .icon {
+        svg {
+          color: #b6f09c;
+          filter: drop-shadow(0 4px 6px rgba(182, 240, 156, 0.2))
+            drop-shadow(0 10px 15px rgba(182, 240, 156, 0.2));
+        }
+      }
+    }
+  }
+
   /* //?  dimensions */
   &.small {
     padding: 8px 12px;

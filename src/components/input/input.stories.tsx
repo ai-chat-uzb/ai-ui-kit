@@ -21,13 +21,17 @@ export const Story: StoryObj<typeof Input> = (
     handleSubmit,
     control,
     reset,
-    formState: { errors }
+    formState: { errors },
+    setFocus,
+    setValue,
+    watch
   } = useForm<{ firstName: string }>({
     defaultValues: { firstName: '' }
   });
 
   const onSubmit = values => {
     console.log('values = ', values);
+    setValue('firstName', '');
   };
 
   return (

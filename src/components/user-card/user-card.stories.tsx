@@ -75,5 +75,9 @@ Story.args = {
   //     />
   //   </>
   // ),
-  size: 'large'
+
+  size: 'small',
+  history: {
+    text: 'hello'
+  }
 };

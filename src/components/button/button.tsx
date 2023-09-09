@@ -22,6 +22,7 @@ export interface ButtonProps
   height?: string | number;
   padding?: string | number;
   margin?: string | number;
+  iconHover?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -40,7 +41,8 @@ const Button: React.FC<ButtonProps> = ({
   width,
   height,
   padding,
-  margin
+  margin,
+  iconHover
 }) => {
   const ref = useRef<HTMLButtonElement>(null);
 
@@ -77,7 +79,8 @@ const Button: React.FC<ButtonProps> = ({
         cls[`${size}`],
         cls[`${view}`],
         cls[`${colorView}`],
-        cls[`${iconPosition}`]
+        cls[`${iconPosition}`],
+        iconHover && cls['icon-hover']
       )}
       style={{
         width: width,
@@ -93,7 +96,11 @@ const Button: React.FC<ButtonProps> = ({
       ) : (
         <>
           {iconName && (
-            <Icon size={iconSize} name={iconName || 'alertCircle'} />
+            <Icon
+              size={iconSize}
+              className={cls.icon}
+              name={iconName || 'alertCircle'}
+            />
           )}
           {children && <p className={cls.text}>{children}</p>}
         </>

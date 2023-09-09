@@ -38,6 +38,9 @@ export default {
     iconPosition: {
       options: ['right', 'left'],
       control: { type: 'select' }
+    },
+    iconHover: {
+      options: 'boolean'
     }
   }
 } as Meta<typeof Button>;
@@ -56,7 +59,8 @@ StoryComponent.args = {
   colorView: 'full',
   iconSize: 14,
   iconPosition: 'left',
-  width: '100%'
+  width: '100%',
+  iconHover: true
 };
 
 // StoryComponent.story = {

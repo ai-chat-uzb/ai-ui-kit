@@ -8,7 +8,7 @@ import Typography from 'components/typography/typography';
 import cls from './user-content.module.scss';
 
 export interface UserContentProps extends Pick<AvatarProps, 'status' | 'url'> {
-  userName: string;
+  userName?: string;
   description: string;
   date: string;
   author: boolean;
