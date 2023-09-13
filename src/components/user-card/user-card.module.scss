@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 16px;
+  padding: 8px 16px;
   background: var(
     --glass-fill,
     linear-gradient(
@@ -16,6 +16,46 @@
   border-top: 1px solid var(--glass-stroke, rgba(255, 255, 255, 0.08));
   border-radius: 16px;
   transition: all linear 0.3s;
+
+  &.group {
+    background: transparent;
+    border-top: 0;
+    border-bottom: 1px solid var(--glass-stroke, rgba(255, 255, 255, 0.08));
+
+    &.active {
+      background: var(
+        --glass-fill,
+        linear-gradient(
+          145deg,
+          rgba(215, 237, 237, 0.16) 0%,
+          rgba(204, 235, 235, 0.04) 100%
+        )
+      );
+      border: 1px solid var(--glass-stroke, rgba(255, 255, 255, 0.08));
+
+      &:hover {
+        background: var(
+          --glass-fill,
+          linear-gradient(
+            145deg,
+            rgba(215, 237, 237, 0.24) 0%,
+            rgba(204, 235, 235, 0.14) 100%
+          )
+        );
+      }
+    }
+
+    &:hover {
+      background: var(
+        --glass-fill,
+        linear-gradient(
+          145deg,
+          rgba(215, 237, 237, 0.2) 0%,
+          rgba(204, 235, 235, 0.1) 100%
+        )
+      );
+    }
+  }
 
   &.click {
     cursor: pointer;
@@ -70,17 +110,6 @@
     }
   }
 
-  &:hover {
-    background: var(
-      --glass-fill,
-      linear-gradient(
-        145deg,
-        rgba(215, 237, 237, 0.2) 0%,
-        rgba(204, 235, 235, 0.1) 100%
-      )
-    );
-  }
-
   &.history {
     .left {
       .text-wrap {
@@ -107,5 +136,16 @@
 
   &.gap {
     gap: 0;
+  }
+
+  &:hover {
+    background: var(
+      --glass-fill,
+      linear-gradient(
+        145deg,
+        rgba(215, 237, 237, 0.2) 0%,
+        rgba(204, 235, 235, 0.1) 100%
+      )
+    );
   }
 }

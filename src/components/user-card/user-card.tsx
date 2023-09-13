@@ -13,12 +13,14 @@ export interface UserCardProps
   username: string;
   onClick?: () => void;
   className?: string;
+  typeChat?: 'group' | 'personal';
   type?: 'group' | 'personal';
   history?: {
     text: string;
     photoUrl?: string;
     username?: string;
   };
+  active?: boolean;
 }
 
 const UserCard: React.FC<UserCardProps> = ({
@@ -31,7 +33,9 @@ const UserCard: React.FC<UserCardProps> = ({
   onClick,
   className,
   history,
-  type = 'personal'
+  typeChat = 'personal',
+  type = 'personal',
+  active
 }) => {
   const sizeBoolean = size === 'small';
 
@@ -44,7 +48,9 @@ const UserCard: React.FC<UserCardProps> = ({
         className,
         cls[`${className}`],
         history && cls.history,
-        !rightElement && cls.gap
+        !rightElement && cls.gap,
+        cls[`${type}`],
+        active && cls.active
       )}
       onClick={onClick}
     >
@@ -73,7 +79,7 @@ const UserCard: React.FC<UserCardProps> = ({
           </div>
           {history && (
             <div className={cls['history-wrapper']}>
-              {type === 'group' && (
+              {typeChat === 'group' && (
                 <div className={cls['history-row']}>
                   <Avatar
                     url={history?.photoUrl}
@@ -95,7 +101,7 @@ const UserCard: React.FC<UserCardProps> = ({
               <div
                 className={cx(
                   cls['history-row'],
-                  type === 'personal' && cls.personal
+                  typeChat === 'personal' && cls['chat-personal']
                 )}
               >
                 <Typography

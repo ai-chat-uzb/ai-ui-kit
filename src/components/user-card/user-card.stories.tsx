@@ -79,5 +79,7 @@ Story.args = {
   size: 'small',
   history: {
     text: 'hello'
-  }
+  },
+  active: true,
+  type: 'group'
 };
