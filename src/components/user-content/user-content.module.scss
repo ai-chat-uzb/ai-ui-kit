@@ -6,17 +6,6 @@
     width: 75%;
     width: max-content;
     max-width: 90%;
-    padding: 16px;
-    background: var(
-      --glass-fill,
-      linear-gradient(
-        145deg,
-        rgba(215, 237, 237, 0.16) 0%,
-        rgba(204, 235, 235, 0.06) 100%
-      )
-    );
-    border: 1px solid var(--color-black-6);
-    border-radius: 10px 24px 24px;
 
     .top-container {
       display: flex;
@@ -47,6 +36,17 @@
     .description-container {
       width: calc(100%);
       margin-top: 5px;
+      padding: 8px 10px;
+      background: var(
+        --glass-fill,
+        linear-gradient(
+          145deg,
+          rgba(215, 237, 237, 0.16) 0%,
+          rgba(204, 235, 235, 0.06) 100%
+        )
+      );
+      border: 1px solid var(--color-black-6);
+      border-radius: 8px 16px 16px;
     }
     @media screen and (max-width: 1100px) {
       width: max-content;
@@ -59,8 +59,6 @@
 
     .position-container {
       color: white !important;
-      background: var(--color-chat-1);
-      border-radius: 24px 24px 10px;
     }
 
     .top-container {
@@ -71,7 +69,8 @@
 
     .description-container {
       margin-top: 5px;
-      padding-left: 0;
+      background: var(--color-chat-1);
+      border-radius: 16px 8px 16px 16px;
     }
   }
 
@@ -85,7 +84,6 @@
 
     .description-container {
       margin-top: 5px;
-      padding-left: 0;
     }
   }
 }

@@ -24,8 +24,8 @@ Story.args = {
         doloremque similique labore laboriosam fuga soluta quia accusamus, ipsam
         aperiam?`,
   date: 'just now',
-  url: 'https://firebasestorage.googleapis.com/v0/b/ai-chat-c50cc.appspot.com/o/avatar-img-1.svg?alt=media&token=465c5a85-86e0-4a78-9355-a6ed0fc8ded6',
   status: 'active',
-  chat: 'private',
-  author: true
+  chat: 'group',
+  author: false,
+  url: 'https://firebasestorage.googleapis.com/v0/b/ai-chat-c50cc.appspot.com/o/avatar-img-7.png?alt=media&token=91f50fb9-a8a8-43a1-81e0-77fbf95dce83'
 };
