@@ -68,6 +68,7 @@ const UserCard: React.FC<UserCardProps> = ({
             />
             <Typography
               children={username}
+              title={username}
               tagName="h5"
               lineHeight={sizeBoolean ? 14 : 18}
               size={sizeBoolean ? 12 : 10}

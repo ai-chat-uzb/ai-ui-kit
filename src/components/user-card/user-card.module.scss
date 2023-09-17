@@ -122,7 +122,12 @@
           align-items: center;
 
           .username {
+            width: 100px;
             margin-top: 0 !important;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            cursor: pointer;
           }
         }
       }

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import cx from 'classnames';
 
 import cls from './typography.module.scss';
 
-export interface TypographyProps {
+export interface TypographyProps extends HTMLAttributes<HTMLParagraphElement> {
   children: React.ReactNode;
   size?: number;
   lineHeight?: number;
@@ -30,7 +30,8 @@ const Typography: React.FC<TypographyProps> = ({
   tagName = 'p',
   textAlign = 'start',
   linearGradients,
-  className
+  className,
+  title
 }) => {
   const Tag = tagName as keyof JSX.IntrinsicElements;
 
@@ -47,6 +48,7 @@ const Typography: React.FC<TypographyProps> = ({
         textAlign: textAlign,
         background: `var(${linearGradients && color})`
       }}
+      title={title}
       className={cx(
         cls.wrapper,
         linearGradients && cls['linear-gradient'],
